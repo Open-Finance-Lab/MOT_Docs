@@ -5,7 +5,7 @@
 Model Openness Tool (MOT) Documentation
 ========================================
 
-Welcome to the developer & user documentation for the **Model Openness Tool (MOT)**, the service behind `https://mot.isitopen.ai`.
+Welcome to the documentation for the **Model Openness Tool (MOT)**, `https://mot.isitopen.ai`.
 
 .. contents::
    :local:
