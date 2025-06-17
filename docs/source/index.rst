@@ -20,15 +20,46 @@ Model Openness Tool Documentation
    :caption: Introduction
 
    intro/overview
-
+   intro/mof
+   intro/quickstart
 
 .. toctree::
    :maxdepth: 2
-   :caption: Sumit Models
+   :caption: View Models
+   
+   search/search_models
+   search/model_detailed_page
 
-   submit/form
-   submit/repo
+.. toctree::
+   :maxdepth: 2
+   :caption: Evaluate Models
 
+   evaluate/evaluation_form
+   evaluate/case_walkthrough
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Submit Models
 
+   submit/submit_model
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Badge System
 
+   badge/badge
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Model Distribution Guide
+
+   distribution/overview
+   distribution/map_components
+   distribution/licenses
+   distribution/evaluate_submit
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Developer Guide
+
+   developer/developer_overview
