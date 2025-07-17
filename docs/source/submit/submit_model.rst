@@ -1,52 +1,93 @@
-Submit Model
-============
+Submit a Model
+==============
 
-Once you've evaluated your model using the MOT, you can submit it to the public catalog at mot.isitopen.ai.
+Once you’ve completed the evaluation process and received your openness classification, you can submit your model to the public Model Openness Tool (MOT) catalog.
 
-Submission Workflow
--------------------
+Step 1: Complete the Evaluation Form
+------------------------------------
 
-1. **Prepare your evaluation artifacts**
-   - Run the evaluation form via: https://mot.isitopen.ai/model/evaluate  
-   - Download the output `MOF.json` and openness badge after submission :contentReference[oaicite:1]{index=1}  
+Start by visiting the evaluation form:
 
-2. **Fork the MOT GitHub repository**
-   - Repository: `lfai/model_openness_tool` on GitHub  
-   - Create a fork and clone it locally :contentReference[oaicite:2]{index=2}  
+https://mot.isitopen.ai/model/evaluate
 
-3. **Add your model to the `models/` directory**
-   - Create a new folder with your *model name* (e.g., `my‑model‑v1/`)  
-   - Add:
-     - `MOF.json` produced by MOT
-     - Model metadata file (optional) including description, version, license, contact info
-     - Optional badge snippet (e.g., `![Open Model – Class I](… )`)
+After filling out your model information and licenses, the tool will generate:
 
-4. **Submit a Pull Request**
-   - Push your branch to your fork
-   - Open a PR against the `main` branch of `lfai/model_openness_tool`
-   - In the PR description, include:
-     - Link to your MOT evaluation page or JSON preview
-     - Licensing info and distribution details
-     - Verified openness classification (Class I/II/III)
+- A downloadable `MOF.json` file
+- A corresponding openness badge (Class I, II, or III)
 
-5. **Community review process**
-   - Your submission will undergo review by MOT maintainers and community members for:
-     - Accurate mapping to MOF components
-     - Valid SPDX license IDs in `MOF.json`
-     - Completeness and reproducibility
-   - After feedback, resolve comments and merge the PR
+These files are required for submission.
 
-6. **Post-merge publication**
-   - Once merged, your model appears in the MOT public catalog  
-   - The catalog displays:
-     - Model name, openness class badge, component breakdown, metadata :contentReference[oaicite:3]{index=3}  
+Step 2: Fork the Repository
+---------------------------
 
-Badge Usage Guidelines
-----------------------
+To submit your model, fork the official GitHub repository:
 
-Embed the badge in your:
-- README, blog posts, or model card
-- Website or documentation portal
+https://github.com/lfai/model_openness_tool
 
-Badges visually communicate your model's openness level and link back to MOT for transparency.
+Clone your fork locally:
+
+.. code-block:: bash
+
+   git clone https://github.com/your-username/model_openness_tool.git
+   cd model_openness_tool
+
+Step 3: Add Your Model Files
+----------------------------
+
+Inside the `models/` directory, create a new folder named after your model (e.g., `my-model-name/`). Include the following:
+
+- `MOF.json` – produced by the evaluation tool
+- Optional: a `README.md` with additional model info
+- Optional: badge embed code snippet
+
+Example structure:
+
+.. code-block:: text
+
+   models/
+     my-model-name/
+       MOF.json
+       README.md
+
+Step 4: Submit a Pull Request
+-----------------------------
+
+Push your changes and open a pull request to the `main` branch of the original repository. In the pull request description, include:
+
+- A short summary of your model
+- Licensing and openness details
+- A link to your evaluation result (if hosted)
+- Any additional notes for reviewers
+
+MOT maintainers will review your submission to ensure it complies with the MOF evaluation framework.
+
+Step 5: Appear in the Public Catalog
+------------------------------------
+
+After your pull request is approved and merged, your model will be listed in the MOT public catalog:
+
+https://mot.isitopen.ai/
+
+Your entry will display:
+
+- Model name and version
+- MOF openness classification badge
+- Component-by-component license status
+- Links to your model artifacts
+
+Step 6: Share Your Openness Badge
+---------------------------------
+
+You can embed your badge in your documentation or model card to communicate transparency to users.
+
+Example badge snippet (HTML):
+
+.. code-block:: html
+
+   <a href="https://mot.isitopen.ai/model/my-model-name">
+     <img src="https://mot.isitopen.ai/badge/my-model-name/badge.svg"
+          alt="MOF Class I Badge">
+   </a>
+
+Refer to :doc:`../badge/badge` for more information on badge usage.
 
