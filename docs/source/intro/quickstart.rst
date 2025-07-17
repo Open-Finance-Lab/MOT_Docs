@@ -15,7 +15,7 @@ Prepare your model release package with relevant artifacts, such as:
 - Documentation (README, research paper, diagrams)
 - License files for each component
 
-Refer to the :doc:`intro/mof` page for the definitive list of 16 MOF components.
+Refer to the :doc:`../intro/mof` page for the definitive list of 16 MOF components.
 
 Step 2: Open the Evaluation Form
 --------------------------------
